@@ -94,7 +94,7 @@ continueIterate = true;
    C = fzero(newC, 0.8);
 </pre><h2 id="9">Recalculate the deflection</h2><p>Calculate the a new value for the deflection using the relationship <img src="CatenaryIntersections_eq04174399828438849659.png" alt="$y_{B}^{2} - s_{B}^{2} = c^{2}$">, where <img src="CatenaryIntersections_eq09851516459641037514.png" alt="$y_{B} = C + h$"> and <img src="CatenaryIntersections_eq07980896385248769808.png" alt="$s_{B}$"> is the arc length from the midpoint to the endpoint</p><pre class="codeinput">   deflection = sqrt(C^2 + (ArcLength/2)^2) - C;
 </pre><h2 id="10">Check if the guess has converged upon the actual value</h2><pre class="codeinput">   <span class="keyword">if</span> abs((deflection-d_0)/d_0) &lt; 0.0001
-       disp([<span class="string">'The deflection of the horizontal cables is '</span> num2str(deflection)]);
+       disp([<span class="string">'The deflection of the central cable is '</span> num2str(deflection)]);
        <span class="keyword">break</span>
    <span class="keyword">end</span>
 </pre><pre class="codeoutput">The deflection of the horizontal cables is 0.061514
